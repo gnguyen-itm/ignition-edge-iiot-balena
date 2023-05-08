@@ -1,0 +1,19 @@
+
+version: '2.1'
+
+services:
+  
+  ignition:
+    image: inductiveautomation/ignition:latest
+    ports:
+      - "9088:8088"
+      - "8043:8043"
+      - "8060:8060"
+    volumes:
+      - "ignition-data:/var/lib/ignition/data"
+    cap_add:
+      - SYS_RAWIO
+    privileged: true
+  
+volumes:
+  ignition-data:

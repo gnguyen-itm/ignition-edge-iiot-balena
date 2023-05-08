@@ -1,0 +1,22 @@
+name: Ignition
+type: sw.application
+description: >-
+  Ignition seamlessly collects all your data and allows you to easily design any kind of industrial application, and instantly web-deploy clients to anyone, anywhere with balena.
+joinable: false
+# By default post-provisioning is overwritten by the deploy-to-balena GitHub action to match README.md
+post-provisioning: Click 'View code' to see the README.
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: "https://github.com/mpous/ignition-balena"
+  logo:
+    type: blob.asset
+    data:
+      url: 'https://raw.githubusercontent.com/mpous/ignition-balena/master/logo.png'
+data:
+  defaultDeviceType: genericx86-64-ext
+  supportedDeviceTypes:
+    - genericx86-64-ext
+    - intel-nuc
+
