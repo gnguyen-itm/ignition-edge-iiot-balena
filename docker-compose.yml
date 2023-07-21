@@ -4,15 +4,23 @@ version: '2.1'
 services:
   
   ignition:
-    image: inductiveautomation/ignition:latest
+    #image: inductiveautomation/ignition:latest
+    build: ./ignition
     ports:
       - "9088:8088"
       - "8043:8043"
       - "8060:8060"
     volumes:
-      - "ignition-data:/var/lib/ignition/data"
+      - ignition-data:/usr/local/bin/ignition/data
     cap_add:
       - SYS_RAWIO
+    environment:
+      - ACCEPT_IGNITION_EULA=Y
+      - GATEWAY_ADMIN_USERNAME=balena
+      - GATEWAY_ADMIN_PASSWORD=balena
+      - IGNITION_EDITION=edge
+    command: >
+      -n Ignition-supp-66195
     privileged: true
   
 volumes:
