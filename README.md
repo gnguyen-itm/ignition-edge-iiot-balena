@@ -1,7 +1,5 @@
 # SCADA Ignition on balena
 
-In the past we have explored [how to deploy the MING stack for Industrial IoT environments with balena](https://blog.balena.io/ming-stack-mqtt-influxdb-nodered-grafana-balena/) and scaling these solutions across various factory floors using HiveMQ for example. 
-
 In this repository, we're going to delve into how to deploy Inductive Automation Ignition SCADA on balena in order to run the SCADA solution on your Industrial stack. Take advantage of using balena to have flexibility running other services in your industrial stack on simple devices running within your factory.
 
 ## Disclaimer
@@ -62,6 +60,9 @@ The Ignition service is exposed in the 9088 port.
 Once deployed on your balena device, access your local IP address and add port `9088`. 
 
 On the welcome page select the `Standard Edition`. On the other hand, you can install the `Maker Edition` which is for non commercial uses. You can read [how to deploy Ignition Edge with balena on this repository](https://github.com/mpous/ignition-hivemq4-influxdb-grafana-balena).
+
+![Ignition running on balena](https://github.com/mpous/ignition-balena/assets/173156/dd21387b-18f4-4e80-bdde-3eb93e56edc1)
+
 
 ##### Add MQTT Engine and MQTT Transmitter modules on Ignition
 
