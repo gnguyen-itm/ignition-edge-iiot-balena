@@ -12,6 +12,7 @@ services:
       - "8060:8060"
     volumes:
       - ignition-data:/usr/local/bin/ignition/data
+      - ignition-modules:/usr/local/bin/user-lib/modules
     cap_add:
       - SYS_RAWIO
     environment:
@@ -25,3 +26,4 @@ services:
   
 volumes:
   ignition-data:
+  ignition-modules:
