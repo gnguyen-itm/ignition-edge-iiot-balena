@@ -18,7 +18,7 @@ services:
       - ACCEPT_IGNITION_EULA=Y
       - GATEWAY_ADMIN_USERNAME=balena
       - GATEWAY_ADMIN_PASSWORD=balena
-      - IGNITION_EDITION=edge
+      - IGNITION_EDITION=standard
     command: >
       -n Ignition-supp-66195
     privileged: true
