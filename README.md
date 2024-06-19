@@ -55,7 +55,7 @@ The Ignition service is exposed in the 9088 port.
 
 |Service|Port|Username|Password|
 |:--|---|---|---|
-|Ignition|9088 (http)|balena|balena|
+|Ignition|9088 (http)|admin|password|
 
 
 #### Install Ignition
