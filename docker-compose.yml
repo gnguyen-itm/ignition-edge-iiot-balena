@@ -17,11 +17,11 @@ services:
       - SYS_RAWIO
     environment:
       - ACCEPT_IGNITION_EULA=Y
-      - GATEWAY_ADMIN_USERNAME=balena
-      - GATEWAY_ADMIN_PASSWORD=balena
-      - IGNITION_EDITION=standard
+      - GATEWAY_ADMIN_USERNAME=admin
+      - GATEWAY_ADMIN_PASSWORD=password
+      - IGNITION_EDITION=edge
     command: >
-      -n Ignition-supp-66195
+      -n edge-iiot
     privileged: true
   
 volumes:
