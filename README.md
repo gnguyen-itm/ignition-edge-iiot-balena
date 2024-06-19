@@ -1,3 +1,5 @@
+# Based on the previous work of IoT Giant Marc https://marcpous.com
+
 # SCADA Ignition on balena
 
 In this repository, we're going to delve into how to deploy Inductive Automation Ignition SCADA on balena in order to run the SCADA solution on your Industrial stack. Take advantage of using balena to have flexibility running other services in your industrial stack on simple devices running within your factory.
@@ -27,6 +29,7 @@ In this post, we'll be focusing on deploying [Ignition Edge](https://inductiveau
 
 #### Hardware
 
+* This fork is tested with Raspberry PI4
 * Intel NUC or similar (x86 - amd64)
 * USB stick to flash the balenaOS image on the Intel device
 
@@ -36,11 +39,11 @@ In this post, we'll be focusing on deploying [Ignition Edge](https://inductiveau
 
 * [balenaEtcher](https://etcher.balena.io/) to flash the USB stick with the balenaOS image.
 
-* [Ignition SCADA license](https://hub.balena.io/apps/2048634/ignition-balena) or just use the trial demo which is free for 2 hours. After that you will need to restart the service running on the device.
+* [Ignition SCADA license](https://inductiveautomation.com/downloads/ignition/) or just use the trial demo which is free for 2 hours. After that you will need to restart the service running on the device.
 
 As usual, you have three options here. Use balenaHub, click the “Deploy with balena” button or use the balena CLI. You can do it in just one click by using the button below:
 
-[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mpous/ignition-balena)
+[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/gnguyen-itm/ignition-edge-iiot-balen)
 
 Follow instructions, click Add a Device and flash an SD card with that OS image dowloaded from balenaCloud. Enjoy the magic 🌟Over-The-Air🌟!
 
@@ -59,14 +62,7 @@ The Ignition service is exposed in the 9088 port.
 
 Once deployed on your balena device, access your local IP address and add port `9088`. 
 
-On the welcome page select the `Standard Edition`. On the other hand, you can install the `Maker Edition` which is for non commercial uses. You can read [how to deploy Ignition Edge with balena on this repository](https://github.com/mpous/ignition-hivemq4-influxdb-grafana-balena).
-
 ![Ignition running on balena](https://github.com/mpous/ignition-balena/assets/173156/dd21387b-18f4-4e80-bdde-3eb93e56edc1)
-
-
-##### Add MQTT Engine and MQTT Transmitter modules on Ignition
-
-To receive data from the edge IIoT gateway running Ignition and balena, you will need to install 3rd party packages made by Cirrus Link to install the MQTT modules. For this project we will only need to install the `MQTT engine` and the `MQTT Transmission` modules. Download the [MQTT Cirrus Link modules for Ignition](https://inductiveautomation.com/downloads/third-party-modules/8.1.27) here. 
 
 
 
