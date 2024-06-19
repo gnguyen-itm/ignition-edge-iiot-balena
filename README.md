@@ -62,7 +62,7 @@ The Ignition service is exposed in the 9088 port.
 
 Once deployed on your balena device, access your local IP address and add port `9088`. 
 
-![Ignition running on balena](https://github.com/mpous/ignition-balena/assets/173156/dd21387b-18f4-4e80-bdde-3eb93e56edc1)
+![Ignition running on balena](balena-ignition-edge-iiot.png)
 
 
 
