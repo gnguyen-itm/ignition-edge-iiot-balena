@@ -21,7 +21,7 @@ services:
       - GATEWAY_ADMIN_PASSWORD=password
       - IGNITION_EDITION=edge
     command: >
-      -n edge-iiot
+      -n balena-edge-iiot
     privileged: true
   
 volumes:
